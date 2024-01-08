@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World Saver</title>
+  <style>
+    /* Reset default margin and padding */
+    body, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Apply a background color */
+    body {
+      background-color: #282c35;
+      color: #ffffff; /* Text color */
+      font-family: 'Courier New', monospace; /* Programmer monofont */
+    }
+
+    /* Style the header */
+    h3 {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Style the buttons */
+    button {
+      width: 300px;
+      margin: 10px auto; /* Center the buttons */
+      padding: 10px;
+      font-family: 'Courier New', monospace;
+      background-color: #007acc;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005a9c;
+    }
+
+    /* Style the list of extracted Convos */
+    h5 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    ol {
+      list-style-type: decimal;
+      padding-left: 20px;
+      max-height: 200px; /* Set maximum height to 60px */
+      overflow-y: auto; /* Enable vertical scrolling */
+      overflow-x: hidden;
+    }
+
+    li {
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+  </style>
+  <script src="popup.js"></script>
+</head>
+<body>
+  <script src="libs/jszip.min.js"></script>
+
+  <h3>Extraction Tool</h3>
+
+  <button id="extractButton">Extract Text</button>
+  <button id="saveButton">Zip and Save</button>
+
+  <h5>List of Extracted Convos:</h5>
+  <ol id="textList"></ol> <!-- Added an unordered list to display extracted text -->
+</body>
+</html>
